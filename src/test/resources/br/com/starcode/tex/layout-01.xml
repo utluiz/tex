@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" structure="positional">
+	<header width="650">
+		<column value="LINHAARQUIVO" type="String" position="1"/>			
+		<fixed value="***" position="110"/>
+		<param value="name" type="String" position="113"/>			
+		<fixed value="***" position="130"/>
+		<param value="age" type="Integer" position="132"/>			
+		<param value="age" type="Integer" format="#,#00.0#" position="152"/>			
+		<column value="saldoConta" type="BigDecimal" format="#,#00.000##" position="172"/>			
+		<column value="saldoConta" type="BigDecimal" format="0000000000.000" position="192"/>			
+		<column value="saldoConta" type="BigDecimal" position="212"/>		
+		<column value="saldoConta" type="BigDecimal" format="#,#00.000000" position="232"/>			
+		<column value="saldoConta2" type="BigDecimal" format="0000000000.000" position="252"/>			
+		<column value="saldoConta2" type="BigDecimal" position="272" align="right"/>		
+		<fixed value="***" position="297"/>
+		<column value="saldoConta" type="BigDecimal" format="#,#0.000##" position="300" decimal-separator="@" grouping-separator=";"/>			
+		<column value="saldoConta" type="BigDecimal" format=".0" position="320"/>			
+	</header>
+	<detail width="650">
+		<fixed value="fixed" position="1"/>
+		<fixed value="***" position="6"/>
+		<fixed value="fixed" position="9"/>
+		<fixed value="***" position="15"/>
+		<counter position="20"/>
+		<fixed value="***" position="25"/>
+		<column value="LINHAARQUIVO" type="String" position="30"/>			
+	</detail>
+	<detail name="alternativa" width="140">
+		<column value="LINHAARQUIVO" type="String" position="1"/>			
+		<fixed value="456" position="120" fill="0"/>
+		<fixed value="123" position="130" fill="*" align="right"/>
+	</detail>
+	<detail name="separado" structure="separator" separator=";">
+		<column value="LINHAARQUIVO" type="String"/>			
+		<fixed value="456" />
+		<fixed value="789" />
+		<column value="dataNascimento" type="Date" />
+		<column value="dataNascimento" type="Date" format="dd/MM/yyyy" />
+		<column value="dataNascimento" type="Date" format="dd/MM/yyyy" align="right" width="12" />
+		<column value="dataNascimento" type="Date" format="dd/MM/yyyy" align="right" width="20" fill="_" />
+		<column value="dataNascimento" type="Date" format="yyyyMMdd" />
+	</detail>
+	<footer width="650">
+		<column value="LINHAARQUIVO" type="String" position="1"/>			
+	</footer>
+</layout>
